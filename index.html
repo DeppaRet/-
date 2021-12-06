@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+    <title>Title</title>
+    <link rel="stylesheet" href="public/styles/index.css">
+</head>
+<body>
+<div class="grid-container">
+    <div class="logo">
+        <a href="index.html"><img class="logoImage" src="public/images/logo.png"/></a>
+    </div>
+    <div class="header">
+        <h1>Документация к программе</h1>
+    </div>
+    <div class="content" id="content">
+        <h3 id="contentHeader">Content</h3>
+        <div id="choosenPage"></div>
+    </div>
+    <div class="menu">
+        <h3>Меню</h3>
+        <div class="menu-items">
+            <p><a class="menu-item" href="#" onclick="loadSubjectArea()" id="scope">Предметная область</a>
+            <p><a class="menu-item" href="#" onclick="loadFunctions()" id="func">Основные функции</a>
+            <p><a class="menu-item" href="#" onclick="loaddbModel()" id="db">Модель взаимодействия с БД</a>
+            <p><a class="menu-item" href="#" onclick="loadTests()" id="tests">Тестовые примеры</a>
+            <p><a class="menu-item" href="#" onclick="loadAbout()" id="author">Об авторе</a>
+        </div>
+    </div>
+    <div class="sidebar"></div>
+    <div class="footer">
+        <h3>All rights reserved</h3>
+    </div>
+</div>
+</body>
+</html>
+
+<script>
+    function resetHighlight(){
+        document.getElementById("scope").style.color = "black";
+        document.getElementById("func").style.color = "black";
+        document.getElementById("db").style.color = "black";
+        document.getElementById("tests").style.color = "black";
+        document.getElementById("author").style.color = "black";
+    }
+    function loadSubjectArea() {
+        resetHighlight();
+        document.getElementById("scope").style.color = "red";
+        document.getElementById("contentHeader").innerHTML='<h3>Предметная область</h3>';
+        document.getElementById("choosenPage").innerHTML='<object class="new-page" type="text/html" data="public/pages/Analyze.htm" ></object>';
+    }
+    function loadFunctions(){
+        resetHighlight();
+        document.getElementById("func").style.color = "red";
+        document.getElementById("contentHeader").innerHTML='<h3>Основные функции</h3>';
+        document.getElementById("choosenPage").innerHTML='<object class="new-page" type="text/html" data="public/pages/mainFunctions.htm" ></object>';
+    }
+    function loaddbModel(){
+        resetHighlight();
+        document.getElementById("db").style.color = "red";
+        document.getElementById("contentHeader").innerHTML='<h3>Модель взаимодействия с БД</h3>';
+        document.getElementById("choosenPage").innerHTML='<object class="new-page" type="text/html" data="public/pages/dbModel.html" ></object>';
+    }
+    function loadTests(){
+        resetHighlight();
+        document.getElementById("tests").style.color = "red";
+        document.getElementById("contentHeader").innerHTML='<h3>Тестовые примеры</h3>';
+        document.getElementById("choosenPage").innerHTML='<object class="new-page" type="text/html" data="public/pages/tests.html" ></object>';
+    }
+    function loadAbout(){
+        resetHighlight();
+        document.getElementById("author").style.color = "red";
+        document.getElementById("contentHeader").innerHTML='<h3>Справка</h3>';
+        document.getElementById("choosenPage").innerHTML='<object class="new-page" type="text/html" data="public/pages/about.html" ></object>';
+    }
+</script>
