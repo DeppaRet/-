@@ -19,16 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9aa5cdbc-8ff8-4516-8ee8-8c0388c64879" name="Default Changelist" comment="">
+    <list default="true" id="9aa5cdbc-8ff8-4516-8ee8-8c0388c64879" name="Default Changelist" comment="v2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pages/Analyze.files/filelist.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/pages/Analyze.files/filelist.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pages/Analyze.files/image002.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/pages/Analyze.files/image002.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pages/Analyze.files/image004.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/pages/Analyze.files/image004.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pages/Analyze.htm" beforeDir="false" afterPath="$PROJECT_DIR$/public/pages/Analyze.htm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pages/dbModel.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pages/subjectArea.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pages/tests.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/mainFunctions.htm" beforeDir="false" afterPath="$PROJECT_DIR$/public/pages/mainFunctions.htm" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,8 +81,16 @@
       <workItem from="1638817471530" duration="1194000" />
       <workItem from="1638859298903" duration="72000" />
       <workItem from="1638859481046" duration="706000" />
-      <workItem from="1639393218422" duration="1783000" />
+      <workItem from="1639393218422" duration="2117000" />
     </task>
+    <task id="LOCAL-00001" summary="v2">
+      <created>1639395509408</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1639395509408</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -106,6 +107,10 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="v2" />
+    <option name="LAST_COMMIT_MESSAGE" value="v2" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="434" y="171" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1639393573946">
       <screen x="0" y="0" width="1366" height="738" />
@@ -115,6 +120,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="463" y="124" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1637347097082" />
+    <state x="275" y="102" key="Vcs.Push.Dialog.v2" timestamp="1639395523832">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="275" y="102" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1639395523832" />
     <state x="0" y="0" width="585" height="738" key="find.popup" timestamp="1637587726026">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
