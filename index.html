@@ -6,10 +6,10 @@
     <title>Title</title>
     <link rel="stylesheet" href="public/styles/index.css">
 </head>
-<body>
+<body onload="loadMain()">
 <div class="grid-container">
     <div class="logo">
-        <a href="index.html"><img class="logoImage" src="public/images/logo.png"/></a>
+        <a onclick="loadMain()"><img class="logoImage" src="public/images/logo.png"/></a>
     </div>
     <div class="header">
         <h1>Документация к программе</h1>
@@ -30,8 +30,11 @@
     </div>
     <div class="sidebar"></div>
     <div class="footer">
-        <h3>Разработано в СПбГТИ(ТУ) в 2021 году</h3>
+        <h3>Разработано в СПбГТИ(ТУ) в 2023 году</h3>
     </div>
+    <script> 
+    
+    </script>
 </div>
 </body>
 </html>
@@ -44,29 +47,35 @@
         document.getElementById("tests").style.color = "black";
         document.getElementById("author").style.color = "black";
     }
+    function loadMain(){
+        resetHighlight();
+        document.getElementById("contentHeader").innerHTML=' ';
+        document.getElementById("choosenPage").innerHTML='<object class="new-page" type="text/html" data="public/pages/main.html" ></object>';
+    }
     function loadSubjectArea() {
         resetHighlight();
         document.getElementById("scope").style.color = "red";
         document.getElementById("contentHeader").innerHTML='<h3>Предметная область</h3>';
-        document.getElementById("choosenPage").innerHTML='<object class="new-page" type="text/html" data="public/pages/Analyze.htm" ></object>';
+        document.getElementById("choosenPage").innerHTML='<object class="new-page" type="text/html" data="public/pages/analyze.html" ></object>';
     }
     function loadFunctions(){
         resetHighlight();
         document.getElementById("func").style.color = "red";
         document.getElementById("contentHeader").innerHTML='<h3>Основные функции</h3>';
-        document.getElementById("choosenPage").innerHTML='<object class="new-page" type="text/html" data="public/pages/mainFunctions.htm" ></object>';
+        /*document.getElementById("choosenPage").innerHTML='<object class="new-page" type="text/html" data="public/pages/mainFunctions.htm" ></object>';*/
+        document.getElementById("choosenPage").innerHTML='<object class="new-page" type="text/html" data="public/pages/functions.html" ></object>';
     }
     function loaddbModel(){
         resetHighlight();
         document.getElementById("db").style.color = "red";
         document.getElementById("contentHeader").innerHTML='<h3>Модель взаимодействия с БД</h3>';
-        document.getElementById("choosenPage").innerHTML='<object class="new-page" type="text/html" data="public/pages/DBModel.htm" ></object>';
+        document.getElementById("choosenPage").innerHTML='<object class="new-page" type="text/html" data="public/pages/DBModel.html" ></object>';
     }
     function loadTests(){
         resetHighlight();
         document.getElementById("tests").style.color = "red";
         document.getElementById("contentHeader").innerHTML='<h3>Тестовые примеры</h3>';
-        document.getElementById("choosenPage").innerHTML='<object class="new-page" type="text/html" data="public/pages/Tests.htm" ></object>';
+        document.getElementById("choosenPage").innerHTML='<object class="new-page" type="text/html" data="public/pages/examples.html" ></object>';
     }
     function loadAbout(){
         resetHighlight();
@@ -74,4 +83,5 @@
         document.getElementById("contentHeader").innerHTML='<h3>Справка</h3>';
         document.getElementById("choosenPage").innerHTML='<object class="new-page" type="text/html" data="public/pages/about.html" ></object>';
     }
+    
 </script>

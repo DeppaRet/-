@@ -1,0 +1,200 @@
+:root {
+    --primary-color: #432E30;
+    --primary-color-light: #8E7474;
+    --accent-color: #FE6A6B;
+    --accent-color-light: #FFE4E4;
+    --accent-color-dark: #B94B4C;
+    --white-color: #FAFBFC;
+    --light-gray-color: #C6CBD1;
+    --medium-gray-color: #959DA5;
+    --dark-gray-color: #444D56;
+    --bg-color: #F8F8FA;
+    --code-bg-color: #F0E8E8;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.main-info {
+    position: relative;
+    top: 3%;
+    left: 5%;
+}
+
+.map {
+    position: relative;
+    top: 3%;
+    left: 5%;
+    width: 100vw;
+    height: 30%;
+}
+
+.info-about {
+    position: relative;
+    top: 1%;
+    left: 5%;
+}
+
+h2 {
+    margin-block-start: 0.3em;
+    margin-block-end: 0.3em;
+}
+
+hr {
+    color: rgba(0, 0, 0, 0.63);
+    background-color: rgba(0, 0, 0, 0.63);
+    border: none;
+    height: 1px;
+}
+
+.callout {
+    text-align: center;
+    padding: 1rem 0 3rem 0;
+}
+
+.callout .button--primary {
+    display: inline-block;
+    margin-top: 0.5rem;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.hero__terminal {
+    width: 75%;
+    margin: -11rem auto 3rem auto;
+    text-align: left;
+    color: white;
+    padding: 0 1rem;
+    border-radius: 4px;
+    background-color: #232323;
+    min-height: 285px;
+    animation: fadeUp 2s;
+    box-shadow: 0px 12px 36.8px 9.2px rgba(0, 0, 0, 0.1);
+    font-size: 15px;
+    font-family: Consolas;
+}
+
+.hljs {
+    display: block;
+    overflow-x: auto;
+    padding: 0.5em;
+    background: #232323;
+    color: #e6e1dc;
+}
+
+.hljs-attribute {
+    color: #cda869;
+}
+
+.hljs-string,
+.hljs-number,
+.hljs-regexp,
+.hljs-variable,
+.hljs-template-variable {
+    color: #a5c261;
+}
+
+.hero__terminal pre {
+    white-space: pre-line;
+    padding-top: 1rem;
+}
+
+.hero__description {
+    margin: -1rem auto 2rem auto;
+}
+
+p {
+    font-weight: 300;
+    color: #4A4A4A;
+}
+
+.hero__title {
+    font-weight: 900;
+    color: var(--primary-color);
+}
+
+.hero {
+    text-align: center;
+    background-color: var(--bg-color);
+    padding: 2rem 0 10rem 0;
+}
+
+
+/* терминал */
+.code {
+    border-radius: 3px;
+    font-family: Space Mono, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+    background: var(--bg-color);
+    border: 1px solid var(--code-bg-color);
+    color: var(--primary-color-light);
+}
+
+.code--block {
+    white-space: pre-line;
+    padding: 0 1.5rem;
+}
+
+.code--inline {
+    padding: 3px 6px;
+    font-size: 80%;
+}
+
+/* кнопка */
+.button--primary {
+    padding: 10px 22px;
+    background-color: var(--accent-color);
+    color: white;
+    position: relative;
+    text-decoration: none;
+    border: 0;
+    transition: all .3s ease-out;
+}
+
+.button--primary:after {
+    position: absolute;
+    content: "";
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--accent-color-light);
+    right: -0.4rem;
+    top: -0.4rem;
+    transition: all 0.3s ease-out;
+}
+
+.button--primary:hover {
+    text-shadow: 0px 1px 1px var(--accent-color-dark);
+    color: white;
+    transform: translate3D(0, -3px, 0);
+}
+
+.button--primary:hover::after {
+    transform: rotate(90deg);
+}
+
+.button--secondary {
+    padding: 10px 22px;
+    border: 2px solid var(--primary-color);
+    transition: all 0.5s ease-out;
+}
+
+.button--secondary:hover {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
+
+
+/*анимация появления терминала*/
+@keyframes fadeUp {
+    0% {
+      opacity: 0;
+      transform: translate3d(0,30px,0);
+    }
+    100% {
+      transform: translate3d(0,0,0);
+    }
+  }

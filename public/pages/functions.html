@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="../styles/functions.css">
+</head>
+
+<body>
+  <h3>Функции класса Ui_LoginForm</h3>
+  <table id="Ui_LoginFormFunctions">
+    <tr>
+      <th>Название</th>
+      <th>Описание</th>
+      <th>Атрибуты</th>
+    </tr>
+    <tr>
+      <td>loginFunc</td>
+      <td>Функция, реализующая авторизацию в приложение от лица различных пользователей. Осуществляется взаимодействие с
+        базой данных Users.
+        На вход принимает ссылку на объект self, откуда получает логин и пароль, вводимый пользователем.</td>
+      <td>login, password</td>
+    </tr>
+    <tr>
+      <td>setupUi</td>
+      <td>Функция, описывающая интерфейс используемый текущей формой. Создает объекты виджета в соответствующих
+        контейнерах и присваивает им имена объектов.</td>
+      <td>self, Form</td>
+    </tr>
+    <tr>
+      <td>retranslateUi</td>
+      <td>Функция, устанавливающая текст и заголовки виджетов.</td>
+      <td>self, Form</td>
+    </tr>
+  </table>
+  <br>
+  <h3>Функции класса Hash</h3>
+  <table id="HashFunctions">
+    <tr>
+      <th>Название</th>
+      <th>Описание</th>
+      <th>Атрибуты</th>
+    </tr>
+    <tr>
+      <td>getHash</td>
+      <td>Получает хэш-значение пароля при авторизации пользователя</td>
+      <td>password</td>
+    </tr>
+  </table>
+  <br>
+  <h3>Функции класса Ui_OperatorForm</h3>
+  <table id="Ui_OperatorFormFunctions">
+    <tr>
+      <th>Название</th>
+      <th>Описание</th>
+      <th>Атрибуты</th>
+    </tr>
+    <tr>
+      <td>getModes</td>
+      <td>Получение из базы данных доступных для выбора режимов</td>
+      <td>self</td>
+    </tr>
+    <tr>
+      <td>chooseMods</td>
+      <td>Заполнение данных в соответствии с выбранным режимом</td>
+      <td>self</td>
+    </tr>
+    <tr>
+      <td>calcMetalChargeClicked</td>
+      <td>Расчет данных о металлической шихте</td>
+      <td>self</td>
+    </tr>
+    <tr>
+      <td>calcTableClick</td>
+      <td>Расчет окисления элементов шихты</td>
+      <td>self</td>
+    </tr>
+    <tr>
+      <td>getFluxes</td>
+      <td>Получение доступных для выбора флюсов из базы данных</td>
+      <td>self</td>
+    </tr>
+    <tr>
+      <td>AddFluxeButtonClicked, removeFluxeButtonClicked</td>
+      <td>Добавление и удаление флюсов используемых при расчетах</td>
+      <td>self</td>
+    </tr>
+    <tr>
+      <td>AddFeroBtnClicked, removeFeroBtnClicked</td>
+      <td>Добавление и удаление ферросплава используемого при расчетах</td>
+      <td>self</td>
+    </tr>
+    <tr>
+      <td>slagCalcClicked</td>
+      <td>Расчет данных о шлаке</td>
+      <td>self</td>
+    </tr>
+    <tr>
+      <td>blastCalcClicked</td>
+      <td>Расчет параметров дутья</td>
+      <td>self</td>
+    </tr>
+    <tr>
+      <td>MaterialBalanceCalcClicked</td>
+      <td>Расчет материального баланса конвертерного процесса плавки стали</td>
+      <td>self</td>
+    </tr>
+    <tr>
+      <td>HeatBalanceCalcClicked</td>
+      <td>Расчет теплового баланса конвертерного процесса плавки стали</td>
+      <td>self</td>
+    </tr>
+    <tr>
+      <td>deoxCalc</td>
+      <td>Расчет раскисления стали</td>
+      <td>self</td>
+    </tr>
+    <tr>
+      <td>openAbout</td>
+      <td>Открытие справки</td>
+      <td>self</td>
+    </tr>
+  </table>
+</body>

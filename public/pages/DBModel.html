@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <title>Title</title>
+   <link rel="stylesheet" href="../styles/dbmodel.css">
+   <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+   <!-- or -->
+   <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet">
+</head>
+
+<body>
+   <div class="container_about">
+      <section class="start_section">
+         <div class="content">
+            <h2 class="section__title">Выбор СУБД</h2>
+            <p>База данных является важной составляющей программных комплек-сов. Выбор СУБД осуществлялся с учетом
+               клиент-серверной архитектуры, поэтому в качестве кандидатов выступили MySQL, MSSQL и PostgreSQL.</p> <br>
+            <p>
+            <table id="DBComparison">
+               <tr>
+                  <th>Свойство</th>
+                  <th>MySQL</th>
+                  <th>MSSQL</th>
+                  <th>PostgreSQL</th>
+               </tr>
+               <tr>
+                  <td>Поддержка операционных систем</td>
+                  <td>Кроссплатформенная</td>
+                  <td>Windows, Linux</td>
+                  <td>Кроссплатформенная</td>
+               </tr>
+               <tr>
+                  <td>Максимальный размер базы данных</td>
+                  <td>Размер базы не ограничен (ограничен размер таблицы в зависимости от ее типа)</td>
+                  <td>Размер ограничен общим чис-лом объектов в БД (2.147.483.647)</td>
+                  <td>Размер базы не ограничен (ограничен размер таблицы – 32 Тбайт)</td>
+               </tr>
+               <tr>
+                  <td>Поддерживаемые типы данных</td>
+                  <td>Все типы данных языка SQL</td>
+                  <td>Все типы данных языка SQL</td>
+                  <td>Все типы данных языка SQL</td>
+               </tr>
+               <tr>
+                  <td>Обновления</td>
+                  <td>8.0.33 (18 апреля 2023)</td>
+                  <td>SQL Server 2019 (2019 год)</td>
+                  <td>15.2 (9 февраля 2023)</td>
+               </tr>
+               <tr>
+                  <td>Лицензирование</td>
+                  <td>Открытое программное обеспечение</td>
+                  <td>Коммерческая лицензия</td>
+                  <td>Открытое программное обеспечение</td>
+               </tr>
+               <tr>
+                  <td>Встраиваемость</td>
+                  <td>Клиент-сервер</td>
+                  <td>Клиент-сервер</td>
+                  <td>Клиент-сервер</td>
+               </tr>
+               <tr>
+                  <td>Модели данных</td>
+                  <td>Реляционная</td>
+                  <td>Реляционная</td>
+                  <td>Реляционная</td>
+               </tr>
+            </table>
+            </p>
+            <p>В качестве СУБД был сделан выбор в пользу MySQL, ввиду следующих признаков:
+            <ul>
+               <li>– MySQL распространяется бесплатно</li>
+               <li>– MySQL относительно быстрее PostgreSQL и MSSQL</li>
+               <li>– Высокая скорость развертки базы данных</li>
+               <li>– Активное сообщество пользователей MySQL</li>
+            </ul>
+
+            </p>
+         </div>
+      </section>
+
+      <section class="section-dbConnectSchema">
+         <div class="content">
+            <h2>Схема взаимодействия с БД</h2>
+            <h5><br><b>С учетом того, что в качестве архитектуры приложения была выбрана двухзвенная клиент-серверная
+                  архитектура, а в качестве СУБД MySQL,</b> интерфейсом взаимодействия с базой данных будет являться
+               ODBC, а именно MyODBC.
+               подразделений автонатизированного проектирования высших учебных заведений.<br><br><b>Предназначен
+                  для</b>
+               создания на основе реляционной базы данных трехмерных моделей и характеристик программно-аппаратных
+               комплексов
+               решать задачу синтеза виртуальных моделей подразделений автоматизированного проектирования высших учебных
+               заведений, представляющего в цифровом виде физические и функциональные характеристики модели в виде
+               совокупности информационно насыщенных элементов. <br><br><b>Цель использования</b> - предоставление для
+               проектировщика исчерпывающей информации при строительстве и начале эксплуатации нового подразделения
+               автоматизированного проектирования.</h5>
+         </div>
+         <div class="img_DBModelSchema">
+            <img src="../images/connect_schema.png" height="600vh">
+         </div>
+      </section>
+      <section class="section-dataSchema">
+         <div class="content">
+            <h2>Даталогическая модель БД</h2>
+            <h5>
+               <br>
+               Даталогическая модель базы данных разработана с использованием ПО MySQL Workbench. При помощи инструмента
+               "Forward Engineering" был получен SQL скрипт для создания БД<br><br>
+               <b>Часть SQL скрипта.</b>
+               <br><br>
+               --<br>
+               -- Table structure for table `caststeelcomposition`<br>
+               --<br>
+
+               DROP TABLE IF EXISTS `caststeelcomposition`;<br>
+               /*!40101 SET @saved_cs_client = @@character_set_client */;<br>
+               /*!50503 SET character_set_client = utf8mb4 */;<br>
+               CREATE TABLE `caststeelcomposition` (<br>
+               `idCastSteelComposition` int NOT NULL AUTO_INCREMENT,<br>
+               `CastSteelCarbon` double NOT NULL,<br>
+               `CastSteelSerum` double NOT NULL,<br>
+               `CastSteelPhosphor` double NOT NULL,<br>
+               `CastSteelSilicon` double NOT NULL,<br>
+               `CastSteelManganese` double DEFAULT NULL,<br>
+               PRIMARY KEY (`idCastSteelComposition`)<br>
+               ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb3;<br>
+               /*!40101 SET character_set_client = @saved_cs_client */;<br>
+            </h5>
+         </div>
+         <div class="img_about">
+            <img src="../images/DataSchema.png">
+         </div>
+
+      </section>
+
+</body>
+
+</html>

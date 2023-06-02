@@ -1,0 +1,183 @@
+:root {
+   --primary-color: #432E30;
+   --primary-color-light: #8E7474;
+   --accent-color: #FE6A6B;
+   --accent-color-light: #FFE4E4;
+   --accent-color-dark: #B94B4C;
+   --white-color: #FAFBFC;
+   --light-gray-color: #C6CBD1;
+   --medium-gray-color: #959DA5;
+   --dark-gray-color: #444D56;
+   --bg-color: #F8F8FA;
+   --code-bg-color: #F0E8E8;
+}
+
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-family: 'Poppins', sans-serif;
+   text-decoration: none;
+   list-style: none;
+}
+
+body {
+   background: var(--bg-color);
+   /* padding: 0 15%; */
+}
+
+/* --------------------------------------------------- about --------------------------------------------------- */
+.section-dbConnectSchema {
+   height: 130vh;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   align-content: flex-start;
+   align-items: baseline;
+   justify-content: center;
+   align-items: center;
+   scroll-snap-align: start;
+}
+
+.section-dataSchema {
+   height: 170vh;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   align-content: flex-start;
+   align-items: baseline;
+   justify-content: center;
+   align-items: center;
+   scroll-snap-align: start;
+}
+
+.start_section {
+   height: 120vh;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   align-content: flex-start;
+   align-items: baseline;
+   justify-content: center;
+   align-items: center;
+   scroll-snap-align: start;
+}
+
+.container_about {
+   padding: 0 15%;
+   scroll-snap-type: y mandatory;
+   overflow-y: scroll;
+   height: 100vh;
+   position: relative;
+
+}
+
+.img_about {
+   min-width: 30vw;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.img_about img {
+   width: 70%;
+}
+
+.img_DBModelSchema {
+   min-width: 30vw;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.img_DBModelSchema img {
+   height: auto;
+}
+
+.content {
+   min-width: 30vw;
+   text-align: justify;
+}
+
+.content h1 {
+   font-size: 4rem;
+   line-height: 1.2;
+   margin-bottom: 2px;
+}
+
+.content h5 {
+   font-size: 16px;
+   font-weight: 400;
+   margin-bottom: 60px;
+}
+
+/*----------table----------*/
+
+table {
+   border-collapse: collapse;
+   width: 100%;
+   transition: color .3s ease-out;
+   margin-bottom: 2rem;
+   font-family: Consolas;
+}
+
+table {
+   display: table;
+   border-collapse: separate;
+   box-sizing: border-box;
+   text-indent: initial;
+   border-spacing: 2px;
+   border-color: gray;
+}
+
+table td:first-child {
+   font-weight: 600;
+} 
+
+table td, table th {
+   border: 1px solid var(--code-bg-color);
+   padding: 0.8rem;
+   font-weight: 300;
+}
+
+table th {
+   text-align: left;
+   background-color: white;
+   border-color: white;
+   border-bottom-color: var(--code-bg-color);
+}
+
+th {
+   display: table-cell;
+   vertical-align: inherit;
+   font-weight: bold;
+   text-align: -internal-center;
+}
+
+td {
+   display: table-cell;
+   vertical-align: inherit;
+}
+
+tr {
+   display: table-row;
+   vertical-align: inherit;
+   border-color: inherit;
+}
+
+table td:nth-of-type(1) {
+	width:34%;
+}
+table td:nth-of-type(2) {
+	width:22%;
+}
+table td:nth-of-type(3) {
+	width:22%;
+}
+table td:nth-of-type(4) {
+	width:22%;
+}
+
+table tbody tr:nth-child(1n) {background: #f1f1f1;}
+table tbody tr:nth-child(2n) {background: #dfdede;}
+table tbody tr:hover {background: #f3bdbd; transition-duration: 0.6s;}
